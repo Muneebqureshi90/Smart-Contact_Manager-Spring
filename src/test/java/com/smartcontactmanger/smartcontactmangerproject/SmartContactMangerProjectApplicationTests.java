@@ -1,0 +1,13 @@
+package com.smartcontactmanger.smartcontactmangerproject;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class SmartContactMangerProjectApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

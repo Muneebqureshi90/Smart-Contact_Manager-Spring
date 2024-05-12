@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+on section using we can use this page on base page
+-->
+
+<html lang="en" xml:th="http://www.thymeleaf.org"
+      th:replace="normal/base::Layout(~{::section})"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>DashBoard</title>
+</head>
+<body>
+<h1>hi</h1>
+<section>
+
+
+    <div class="container">
+       <div class="card mr-6 ml-6">
+
+           <div class="card-body">
+
+               <div class="container center-text">
+                   <img class="text-center" th:src="@{'/image/' + ${user.img}}" style="height: 200px; width: 200px;" alt="profile photo">
+               </div>
+
+               <h1 class="text-center" style="color: black" th:text="${user.name}"></h1>
+               <table class="table table-dark text-center">
+                   <thead>
+                   <tr>
+                       <th scope="col">UserID</th>
+                       <th scope="col"><span th:text="${user.id}"></span></th>
+                   </tr>
+                   </thead>
+                   <tbody>
+
+                   <tr>
+                       <th scope="row">Email</th>
+                       <td th:text="${user.email}">Mark</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">Role</th>
+                       <td th:text="${user.role}">Mark</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">About</th>
+                       <td th:text="${user.about}">Mark</td>
+                   </tr>
+                   <tr>
+                       <th scope="row">Account Active</th>
+                       <td th:text="${user.enabled}">Mark</td>
+                   </tr>
+                   </tbody>
+               </table>
+           </div>
+       </div>
+    </div>
+</section>
+</body>
+</html>

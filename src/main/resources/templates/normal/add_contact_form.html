@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+on section using we can use this page on base page
+-->
+
+<html lang="en" xml:th="http://www.thymeleaf.org"
+      th:replace="normal/base::Layout(~{::section})"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>DashBoard</title>
+</head>
+<body>
+<h1>hi</h1>
+<section>
+    <div class="card mr-6">
+        <div class="card-body">
+            <h2 class="text-center" style="font-size: 1.5em; color: black;"> Add Contact</h2>
+
+            <div class="container-fluid mt-1 ml-3">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <form action="#" th:object="${contact}" enctype="multipart/form-data" method="post"
+                              th:action="@{/user/process-contact}" class="mt-2">
+
+                            <!-- First Name Field -->
+                            <div class="input-group mt-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-user"></i> <!-- Icon for User -->
+                                    </div>
+                                </div>
+                                <input type="text" id="firstName" name="name" placeholder="Enter FirstName Here"
+                                       class="form-control"/>
+                            </div>
+
+                            <!-- Last Name Field -->
+                            <div class="input-group mt-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-user"></i> <!-- Icon for User -->
+                                    </div>
+                                </div>
+                                <input required type="text" id="LastName" name="secondName" placeholder="Enter LastName Here"
+                                       class="form-control"/>
+                            </div>
+
+                            <!-- Work Field -->
+                            <div class="input-group mt-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-briefcase"></i> <!-- Icon for Work -->
+                                    </div>
+                                </div>
+                                <input required type="text" id="work" name="work" placeholder="Enter Work at Here"
+                                       class="form-control"/>
+                            </div>
+
+                            <!-- Phone Number Field -->
+                            <div class="input-group mt-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-phone"></i> <!-- Icon for Phone -->
+                                    </div>
+                                </div>
+                                <input required min ="11" max="13" type="text" id="phone" name="phone" placeholder="Enter Phone Number Here"
+                                       class="form-control"/>
+                            </div>
+
+                            <!-- Email Field -->
+                            <div class="input-group mt-2">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa fa-envelope"></i> <!-- Icon for Email -->
+                                    </div>
+                                </div>
+                                <input required  type="text" id="email" name="email" placeholder="Enter Email Here"
+                                       class="form-control"/>
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <textarea id="mytextarea" placeholder="Enter Description at Here" name="description" class="form-control" rows="18"></textarea>
+                            </div>
+
+                            <div class="custom-file mt-2">
+<!--                                <input type="file" name="image">-->
+
+                                <input type="file" class="form-control-file" name="image"
+                                       id="exampleFormControlFile1" style="color: black;">
+                             </div>
+
+                            <div class="Container text-center">
+                                <button class="btn btn-outline-primary ">Save Contact</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+</section>
+</body>
+</html>

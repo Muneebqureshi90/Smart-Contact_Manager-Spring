@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::Layout(~{::section})">
+<head>
+    <!-- Meta tags, title, and other head elements -->
+    <title>About Page</title>
+</head>
+<body>
+<section style="margin-top: 10%;"> <!-- Add margin-top here -->
+    <div class="container">
+        <div id="login-row" class="row justify-content-center align-items-center " style="color: #709085">
+            <div id="login-column" class="col-md-6">
+                <div id="login-box" class="mt-5">
+
+
+                    <div class="container" th:if="${session.message}" >
+                        <div  class="alert alert-danger my-2 text-center " role="alert">
+                            <span th:text="${session.message}"></span>
+                        </div>
+                        <th:block th:text="${@sessionHelper.removeMessageFromSession()}"></th:block>
+
+                    </div>
+
+                    <h1 class="text-center m-3" style="color: black">Your Registered Email</h1>
+                    <form action="" th:action="@{/send-otp}" method="post" >
+                        <div class="form-group">
+                            <input name="email" type="email" placeholder="Enter Your Email Here" class="form-control">
+                        </div>
+                        <div class="container text-center text-bold mt-5">
+                            <button class="btn btn-warning">
+                                Send OTP
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

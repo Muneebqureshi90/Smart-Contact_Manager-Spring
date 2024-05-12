@@ -1,0 +1,26 @@
+<!doctype html>
+<!--
+on section using we can use this page on base page
+-->
+
+<html lang="en" xml:th="http://www.thymeleaf.org"
+      th:replace="base::Layout(~{::section})"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Home Page</title>
+</head>
+<body>
+<h1>hi</h1>
+<section class="banner d-flex justify-content-center align-items-center">
+   <div class="text-center" >
+       <h2 class="font-weight-bold">Smart Contact Manager</h2>
+       <p>Save Your Contact Smartly using Smart Contact Manager</p>
+       <button class=" btn bg-primary btn-lg text-white  ">Lets Start</button>
+   </div>
+</body>
+</html>

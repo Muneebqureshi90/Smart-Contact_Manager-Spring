@@ -1,0 +1,95 @@
+body{
+    color: #e2e2e2!important;
+}
+.bg-primary{
+    background-color: #022628!important;
+}
+.navbar-nav .nav-item a {
+    font-weight: bold;
+}
+.banner {
+    width: 100%;
+    height: 98vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../image/download (1).png");
+    background-size: cover;
+    color: white;
+}
+.card{
+    padding: 20px;
+    background: #E2E6E7;
+}
+
+
+/*DashBoard*/
+
+
+.sidebar .crossBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Adjust the positioning as needed */
+    font-size: 36px; /* Adjust the font size as needed */
+    cursor: pointer;
+    color: #000; /* Add a color to the cross */
+}
+
+
+@media only screen and (max-width: 600px) {
+.sidebar{
+display: none;
+    width: 80% !important;
+    background: #E2E6E7;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+}
+    .content{
+     margin-left: 0%!important;
+    }
+}
+
+
+
+
+.sidebar{
+   width: 18%;
+    background: #E2E6E7;
+    height: 100%;
+    position: fixed;
+    padding-top: 45px;
+    z-index: 9999999999999999999999999999999999999 ;
+}
+.sidebar a{
+    display: block;
+   width: 100%;
+    padding: 21px 25px;
+    text-decoration: none;
+    color: dimgray;
+    font-weight: bold;
+    font-size: large;
+    border-bottom: 2px solid #ccc;
+    cursor: pointer;
+}
+.sidebar a:hover{
+    background: lightblue;
+}
+.sidebar .divider{
+    height: 0.5px;
+    width: 100%;
+    background: #e2e2e2;
+}
+
+.content{
+    margin-left: 20% ;
+}
+
+
+/*Contants view*/
+
+.my_prfile_image{
+    width: 37px;
+    height: 37px;
+    /*for large images*/
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid black;
+}
